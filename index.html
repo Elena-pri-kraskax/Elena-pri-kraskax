@@ -79,40 +79,32 @@
       transform: scale(1.05);
     }
 
-    /* Модальное окно */
-    .modal {
-      display: none; /* по умолчанию скрыто */
-      position: fixed;
-      top: 0; left: 0;
-      width: 100vw;
-      height: 100vh;
-      background: rgba(0,0,0,0.8);
-      z-index: 1000;
-
-      display: flex;           /* для центрирования */
-      justify-content: center;
-      align-items: center;
-    }
-
-    .modal img {
-      max-width: 90vw;
-      max-height: 90vh;
-      border-radius: 8px;
-      box-shadow: 0 0 20px rgba(255,255,255,0.3);
-    }
-
-    /* Кнопка закрытия */
-    .modal-close {
-      position: fixed;
-      top: 20px;
-      right: 30px;
-      font-size: 30px;
-      color: white;
-      cursor: pointer;
-      user-select: none;
-      font-weight: bold;
-      z-index: 1100;
-    }
+   .modal {
+  display: none; /* изначально скрыта */
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.8);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal img {
+  max-width: 90vw;
+  max-height: 90vh;
+  border-radius: 10px;
+}
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: white;
+  font-size: 2em;
+  cursor: pointer;
+  user-select: none;
+}
 
     .modal-close:hover {
       color: #ccc;
@@ -139,11 +131,10 @@
     </div>
   </section>
 
-  <!-- Модальное окно -->
-  <div class="modal" id="modal">
-    <span class="modal-close" id="modal-close">&times;</span>
-    <img id="modal-img" src="" alt="Увеличенное фото" />
-  </div>
+ <div class="modal" id="modal">
+  <span class="modal-close" id="modal-close">&times;</span>
+  <img id="modal-img" src="" alt="Увеличенное фото" />
+</div>
 
   <script>
     const modal = document.getElementById('modal');
