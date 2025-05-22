@@ -11,6 +11,7 @@
       background: #f5f5f5;
       color: #333;
     }
+
     .cover {
       background: url('wheat-1786977.jpg') no-repeat center center;
       background-size: cover;
@@ -24,51 +25,99 @@
       padding: 0 20px;
       box-sizing: border-box;
     }
+
     .cover h1 {
       margin: 0;
       font-size: 3em;
     }
+
     .cover p {
       font-size: 1.2em;
       margin-top: 0.5em;
     }
+
     .divider {
       height: 3px;
       background: #333;
-      margin: 30px 0;
+      margin: 20px 0;
       width: 80%;
-      max-width: 900px;
+      max-width: 600px;
       margin-left: auto;
       margin-right: auto;
       border-radius: 2px;
     }
+
     .categories {
       max-width: 800px;
       margin: 0 auto 40px;
       padding: 0 20px;
     }
+
     .categories h2 {
       text-align: center;
       margin-bottom: 20px;
     }
+
     .photo-album {
       display: flex;
       flex-wrap: wrap;
       gap: 15px;
       justify-content: center;
     }
+
     .photo-album img {
       width: 150px;
-      height: 200px;
+      height: 150px;
       object-fit: cover;
       border-radius: 6px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.15);
       cursor: pointer;
       transition: transform 0.3s ease;
     }
+
     .photo-album img:hover {
       transform: scale(1.05);
     }
+
+    /* Модальное окно */
+    .modal {
+      display: none; /* по умолчанию скрыто */
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0,0,0,0.8);
+      z-index: 1000;
+
+      display: flex;           /* для центрирования */
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal img {
+      max-width: 90vw;
+      max-height: 90vh;
+      border-radius: 8px;
+      box-shadow: 0 0 20px rgba(255,255,255,0.3);
+    }
+
+    /* Кнопка закрытия */
+    .modal-close {
+      position: fixed;
+      top: 20px;
+      right: 30px;
+      font-size: 30px;
+      color: white;
+      cursor: pointer;
+      user-select: none;
+      font-weight: bold;
+      z-index: 1100;
+    }
+
+    .modal-close:hover {
+      color: #ccc;
+    }
+
   </style>
 </head>
 <body>
@@ -87,17 +136,19 @@
       <img src="IMG_20250509_152458.jpg" alt="Работа 2" />
       <img src="IMG_20250509_152458.jpg" alt="Работа 3" />
       <img src="IMG_20250509_152458.jpg" alt="Работа 4" />
-    
-   <!-- Модальное окно -->
+    </div>
+  </section>
+
+  <!-- Модальное окно -->
   <div class="modal" id="modal">
-    <span class="modal-close" id="modalClose">&times;</span>
-    <img id="modalImg" src="" alt="Увеличенное фото" />
+    <span class="modal-close" id="modal-close">&times;</span>
+    <img id="modal-img" src="" alt="Увеличенное фото" />
   </div>
 
   <script>
     const modal = document.getElementById('modal');
-    const modalImg = document.getElementById('modalImg');
-    const modalClose = document.getElementById('modalClose');
+    const modalImg = document.getElementById('modal-img');
+    const modalClose = document.getElementById('modal-close');
     const images = document.querySelectorAll('.photo-album img');
 
     images.forEach(img => {
@@ -114,7 +165,7 @@
       modalImg.alt = '';
     });
 
-    // Закрыть модал по клику вне картинки
+    // Закрыть при клике вне картинки
     modal.addEventListener('click', (e) => {
       if (e.target === modal) {
         modal.style.display = 'none';
@@ -123,5 +174,6 @@
       }
     });
   </script>
+
 </body>
 </html>
