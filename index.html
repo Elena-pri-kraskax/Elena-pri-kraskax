@@ -2,72 +2,79 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Елена при красках</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Портфолио Елены</title>
   <style>
-    body, html {
+    body {
+      font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0;
-      height: 100%;
-      font-family: 'Segoe UI', sans-serif;
+      background: #f5f5f5;
+      color: #333;
     }
+    <header>
+  <h1>Портфолио Елены</h1>
+  <p>Работы по дизайну и творчеству</p>
+</header>
 
-    .cover {
-      height: 100vh;
-      background: url('wheat-1786977.jpg') no-repeat center center/cover;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      color: white;
-      text-shadow: 0 0 10px rgba(0,0,0,0.7);
+<style>
+  header {
+    background: url('wheat-1786977.jpg') no-repeat center center;
+    background-size: cover;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+  }
+</style>
+    header h1 {
+      margin: 0;
+      font-weight: 400;
+    }
+    section.works {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    .work-item {
+      background: white;
+      margin-bottom: 20px;
       padding: 20px;
-      text-align: center;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
-    
-<div class="portfolio">
-  <h2>Мои работы</h2>
-  <div class="gallery">
-    <div class="work">
-      <img src="images/work1.jpg" alt="Работа 1">
-      <p>Журнал: обложка и вёрстка</p>
-    </div>
-    <div class="work">
-      <img src="images/work2.jpg" alt="Работа 2">
-      <p>Дизайн сайта</p>
-    </div>
-    <div class="work">
-      <img src="images/work3.jpg" alt="Работа 3">
-      <p>Вышивка: "Цветущий сад"</p>
-    </div>
-    <!-- Можешь добавить ещё блоки .work -->
-  </div>
-</div>
-    
-    .title {
-      font-size: 48px;
+    .work-item img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 4px;
+    }
+    .work-item h2 {
+      margin: 10px 0 5px;
+      font-weight: 600;
+    }
+    .work-item p {
       margin: 0;
-    }
-
-    .subtitle {
-      font-size: 20px;
-      margin-top: 10px;
-    }
-
-    @media (max-width: 600px) {
-      .title {
-        font-size: 32px;
-      }
-      .subtitle {
-        font-size: 16px;
-      }
     }
   </style>
 </head>
 <body>
-  <div class="cover">
-    <h1 class="title">Елена при красках</h1>
-    <p class="subtitle">Дизайн, живопись, вышивка — всё, что приходит в голову 🌿</p>
+
+<header>
+  <h1>Портфолио Елены</h1>
+  <p>Работы по дизайну и творчеству</p>
+</header>
+
+<section class="works">
+  <div class="work-item">
+    <h2>Дизайн презентации</h2>
+    <img src="IMG_20250509_152458.jpg" alt="Дизайн презентации" />
+    <p>Краткое описание проекта.</p>
   </div>
+  <div class="work-item">
+    <h2>Макет сайта</h2>
+    <img src="website.jpg" alt="Макет сайта" />
+    <p>Краткое описание проекта.</p>
+  </div>
+ 
+</section>
+
 </body>
 </html>
