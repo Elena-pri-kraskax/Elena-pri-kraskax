@@ -1,27 +1,43 @@
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: #7b68ee;
-    margin: 0;
-    padding: 0;
-    color: #333;
+.portfolio {
+  background-color: #f9f9f9;
+  padding: 60px 20px;
+  text-align: center;
 }
 
-header {
-    background-color: #cce5ff;
-    padding: 20px;
-    text-align: center;
+.portfolio h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: #333;
 }
 
-main {
-    padding: 20px;
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
 }
 
-footer {
-    background-color: #eee;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+.work {
+  width: 280px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.work:hover {
+  transform: scale(1.03);
+}
+
+.work img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.work p {
+  padding: 15px;
+  font-size: 16px;
+  color: #555;
 }
