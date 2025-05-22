@@ -2,21 +2,18 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Портфолио Лены</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Елена • При красках</title>
   <style>
-    /* Обнуление отступов */
     body, html {
       margin: 0;
       padding: 0;
       height: 100%;
-      font-family: Arial, sans-serif;
-      background-color: #f0f0f0;
+      font-family: 'Segoe UI', sans-serif;
     }
 
-    /* Обложка */
     .cover {
-      height: 100vh; /* высота на весь экран */
+      height: 100vh;
       background: url('wheat-1786977.jpg') no-repeat center center/cover;
       display: flex;
       flex-direction: column;
@@ -25,44 +22,33 @@
       color: white;
       text-shadow: 0 0 10px rgba(0,0,0,0.7);
       padding: 20px;
-      box-sizing: border-box;
       text-align: center;
     }
 
-    .cover h1 {
-      font-size: 3em;
-      margin-bottom: 0.2em;
+    .title {
+      font-size: 48px;
+      margin: 0;
     }
 
-    .cover p {
-      font-size: 1.2em;
-      max-width: 600px;
+    .subtitle {
+      font-size: 20px;
+      margin-top: 10px;
     }
 
-    /* Кнопка, если хочешь */
-    .cover button {
-      margin-top: 20px;
-      padding: 12px 25px;
-      font-size: 1em;
-      background-color: #ff6f61;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      color: white;
-      transition: background-color 0.3s ease;
-    }
-    .cover button:hover {
-      background-color: #ff4a3d;
+    @media (max-width: 600px) {
+      .title {
+        font-size: 32px;
+      }
+      .subtitle {
+        font-size: 16px;
+      }
     }
   </style>
 </head>
 <body>
-
   <div class="cover">
-    <h1>Привет, я Лена!</h1>
-    <p>Здесь мои работы: от дизайна до живописи и вышивки. Всё, что приходит в голову!</p>
-    <button onclick="alert('Добро пожаловать на мой сайт!')">Узнать больше</button>
+    <h1 class="title">Елена • При красках</h1>
+    <p class="subtitle">Дизайн, живопись, вышивка — всё, что приходит в голову 🌿</p>
   </div>
-
 </body>
 </html>
