@@ -1,35 +1,68 @@
-
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Портфолио Лены</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Портфолио Лены</title>
+  <style>
+    /* Обнуление отступов */
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+    }
+
+    /* Обложка */
+    .cover {
+      height: 100vh; /* высота на весь экран */
+      background: url('https://example.com/твой_фон.jpg') no-repeat center center/cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-shadow: 0 0 10px rgba(0,0,0,0.7);
+      padding: 20px;
+      box-sizing: border-box;
+      text-align: center;
+    }
+
+    .cover h1 {
+      font-size: 3em;
+      margin-bottom: 0.2em;
+    }
+
+    .cover p {
+      font-size: 1.2em;
+      max-width: 600px;
+    }
+
+    /* Кнопка, если хочешь */
+    .cover button {
+      margin-top: 20px;
+      padding: 12px 25px;
+      font-size: 1em;
+      background-color: #ff6f61;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      color: white;
+      transition: background-color 0.3s ease;
+    }
+    .cover button:hover {
+      background-color: #ff4a3d;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Привет, я Лена!</h1>
-        <p>Здесь моё портфолио: дизайн, рисунки, вышивка и многое другое </p>
-    </header>
-    <main>
-        <section>
-            <h2>Обо мне</h2>
-            <p>Я дизайнер, художник и просто творческий человек. Люблю создавать красоту во всём 😊</p>
-        </section>
-        <section>
-            <h2>Работы</h2>
-            <ul>
-                <li>Полиграфия</li>
-              <li>Живопись</li>
-                <li>Презентации</li>
-                <li>Вышивка и витражи</li>
-                <li>Сайты и макеты</li>
-            </ul>
-        </section>
-    </main>
-    <footer>
-        <p>Связаться со мной: lena@example.com</p>
-    </footer>
+
+  <div class="cover">
+    <h1>Привет, я Лена!</h1>
+    <p>Здесь мои работы: от дизайна до живописи и вышивки. Всё, что приходит в голову!</p>
+    <button onclick="alert('Добро пожаловать на мой сайт!')">Узнать больше</button>
+  </div>
+
 </body>
 </html>
